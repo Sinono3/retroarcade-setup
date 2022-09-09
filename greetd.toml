@@ -1,0 +1,6 @@
+[terminal]
+vt = 1
+
+[default_session]
+command = "/home/arcadex/retroarcade_launch.sh"
+user = "arcadex"
