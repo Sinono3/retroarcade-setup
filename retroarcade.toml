@@ -1,6 +1,6 @@
-rom_path = "/home/arcadex/retroarcade-data/roms/"
-core_path = "/home/arcadex/retroarcade-data/cores/"
-cache_path = "/home/arcadex/retroarcade-data/cache/"
+rom_path = "roms/"
+core_path = "cores/"
+cache_path = "cache/"
 
 # The systems to be configured
 system = [

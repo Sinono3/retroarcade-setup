@@ -9,6 +9,7 @@
 # - sudo
 # - git
 # - Video drivers for xorg (e.g. if running on a virtual machine xserver-xorg-video-vmware)
+# - rsync (to load the script through SSH)
 
 user=$(whoami)
 setupdir=$(pwd)
@@ -26,7 +27,7 @@ cp "$setupdir/asoundrc" "$HOME/.asoundrc"
 sudo alsactl init
 
 # Clone RetroArcade
-git clone "https://github.com/Sinono3/retroarcade-frontend" "$HOME/retroarcade"
+git clone "https://github.com/Sinono3/retroarcade" "$HOME/retroarcade"
 cd "$HOME/retroarcade" || exit 1
 
 # Download OpenVGDB (this is needed for the build)
