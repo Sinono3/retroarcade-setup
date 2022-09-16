@@ -64,7 +64,12 @@ sudo cp greetd.service /etc/systemd/system/greetd.service
 sudo mkdir -p /etc/greetd
 
 # Copy greetd config
-sudo cp "${setupdir}/greetd.toml" /etc/greetd/config.toml
+echo "[terminal]
+vt = 1
+
+[default_session]
+command = \"${HOME}/retroarcade_launch.sh\"
+user = \"${user}\"" | sudo tee /etc/greetd/config.toml
 sudo chmod -R go+r /etc/greetd/
 
 # Add user to video group and enable greetd

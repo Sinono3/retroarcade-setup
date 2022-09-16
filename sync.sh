@@ -1,3 +1,6 @@
 #!/bin/sh
-user="arcadex"
-rsync -urltv -e 'ssh -p 3022' . "${user}@127.0.0.1:/home/${user}/retroarcade-setup"
+target="$1"
+
+[ -z "$target" ] && echo "Provide an SSH directory target: user@host:/path/to/directory" && exit 1
+
+rsync -urltv -e 'ssh' . "$target"
